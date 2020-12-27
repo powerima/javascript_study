@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var weekstr = '일월화수목금토';		// 요일 문자열
+	daygap = 2000;					// 설정된 일자 차리
+	
+	now = newDay = new Date();		// 현재 시각 가져오기
+	
+	// 현재 일자에서 날짜를 가져다 간격일 수 만큼 더해서 새로운 일자에 넣음
+	newDay.setDate(now.getDate() + daygap());
+	document.write('aaaa');
+	newyy = newDay.getYear();
+	newmm = newDay.getMonth() + 1;
+	newdd = newDay.getDate();
+		
+	// 요일 수치 가져와서(0=일, 1=월,...) 해당 문자열롸 환산
+	newww = weekstr.substr(newDay.getDay(), 1);
+	
+	// 문자열로 결합하여 출력하기
+	document.write('현재부터 ' + daygap + '일 후는' 
+			+ newyy + '년 ' + newmm + '월 ' 
+			+ newdd + '일(' + newww + '요일)<br>');
+</script>
+</head>
+<body>
+
+</body>
+</html>

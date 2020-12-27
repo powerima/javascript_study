@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+    document.write("<p>Hello, JavaScript!</p>");
+    
+	var weekstr = '일월화수목금토';	// 요일 문자열
+	var now = new Date();		// 현재 시각 가져오기
+	year = now.getYear();		// 연도 가져오기
+	month = now.getMonth();		// 월 가져오기 (+1)
+	date = now.getDate();		// 날짜 가져오기
+	hour = now.getHours();		// 시각 가져오기
+	min = now.getMinutes();		// 분 가져오기
+	sec = now.getSeconds();		// 초 가져오기
+	mils = now.getMilliseconds();	// 밀리 초 가져오기
+	wkday = now.getDay();			// 요일 수치 가져오기 0=일, 1=월,..
+	document.write(year + '년' + (month+1) + '월 '
+			+ date + ' 일(' + weekstr.substr(wkday, 1) + ') ');
+	
+	// 문자열로 결합하여 출력하기
+	document.write(hour + '시 ' + min + '분 ' + sec +  ' 초: ' + mils + 'ms'); 
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
