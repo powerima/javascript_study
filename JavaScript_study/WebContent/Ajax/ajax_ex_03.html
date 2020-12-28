@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div#menu {
+		width: 200px;
+		height: 200px;
+		text-align: center;
+	}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#button1").click(function(){
+			alert($(this).html());
+		});
+		
+		$("#button2").click(function(){
+			alert($(this).text());
+		});
+		
+		$("#button3").click(function(){
+			alert($(this).val());
+		});
+		
+		function button4(valK) {
+			alert(valK.name);	
+		}
+	});
+</script>
+</head>
+<body>
+<section>
+	<div id="menu">
+		<button id="button1"><img src="timo.jpg" width="200" height="200" /></button><br><br>
+		<button id="button2"><h1>글자만 가져옴</h1></button><br><br>
+		<button id="button3"  value="value값"><h1> value값을 가져온다!</h1></button><br><br>
+		<button name="name값" onclick="button4(this)"><h1>name값을 가져온다!</h1></button>
+	</div>
+</section>
+
+</body>
+</html>

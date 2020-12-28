@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div#displayArea {
+		width: 200px;
+		height: 200px;
+		border: 5px double #6699ff;
+	}
+	
+	div#menu {
+		width: 200px;
+		height: 200px;
+		text-align: center;
+	}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#button1").click(function(){
+				$("#displayArea").html("<img src='timo.jpg' width='200' height='200' />");
+		});
+		
+		$("#button2").click(function(){
+			$("#displayArea").html("");
+		});
+	});
+	
+	function chBtn1(){
+		$("#displayArea").html("<img src='timo.jpg' width='200' height='200' />");
+	}
+	
+	function chBtn2(){
+		$("#displayArea").html("");
+	}
+	
+	$(document).ready(function(){
+		$("#A1").click(function(){
+			$("#displayArea").html("<img src='timo.jpg' width='200' height='200' />");
+		});
+		
+		$("#A2").click(function(){
+			$("#displayArea").html("");
+		});
+	});
+</script>
+</head>
+<body>
+<section>
+	<div id="displayArea">이곳의 내용이 변경</div>
+	<br>
+	<div id="menu">
+		<button id="button1">그림표시</button>&emsp;&emsp;
+		<button id="button2">그림숨김</button><br>
+		<input type="button" id="btn1" onClick='chBtn1()' value="그림표시" /> &emsp;&emsp;
+		<input type="button" id="btn2" onClick='chBtn2()' value="그림숨김" /> <br>
+		<A id="A1"><u>그림표시</u></A>&emsp;&emsp;
+		<A id="A2"><u>그림숨김</u></A>
+	</div>
+</section>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div#result1 {
+		width: 200px;
+		height: 200px;
+		text-align: center;
+		background-color: green;
+	}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#b1").click(function(){
+			$.get("test.txt", function(data, textStatus){				
+				if(textStatus == "success") {
+					alert("정상처리" + textStatus);	// 정상적으로 파일이 불려지면 실행
+					$("#result1").text(data);
+				}
+				
+				if(textStatus == "error") {
+					alert("error 처리");	// 파일이 불려지지 않으면 실행, 없는 파일을 부르면 실행
+				}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+<section>
+	<button id="b1">결과</button><br><br>
+	<div id="result1"></div>
+</section>
+</body>
+</html>

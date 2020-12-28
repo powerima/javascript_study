@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div#result1 {
+		width: 200px;
+		height: 200px;
+		text-align: center;
+		background-color: green;
+	}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#b1").click(function(){
+			var query = {
+				idx : "100",
+				name : "ppk"
+			}
+			
+			// process.jsp 요청 페이지, query는 싫어 보낼 데이터
+			
+			$.ajax({
+				type: "POST",
+				url: "loginPro.jsp",
+				data: query,
+				success:
+					// 응답내용 처리
+					function(data){
+						alert(data);
+						if(data == 1) {
+							// 로그인 성공
+							$("#result1").load("loginResult.html");
+						} else {
+							// 로그인 실패
+							alert("로그인 실패");
+						}
+					}
+			});
+		});
+	});
+</script>
+</head>
+<body>
+<section>
+	<button id="b1">결과</button><br><br>
+	<div id="result1"></div>
+</section>
+</body>
+</html>

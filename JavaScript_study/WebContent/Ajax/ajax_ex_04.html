@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div#menu {
+		width: 200px;
+		height: 200px;
+		text-align: center;
+	}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#button1").click(function(){
+			$("<h1></h1>").html("html 추가1").appendTo("#menu");
+			$("<h1></h1>").html("html 추가2").appendTo("#menu");
+			$("<h1></h1>").html("html 추가2").appendTo("#menu");
+		});
+		
+		$("#button2").click(function(){
+			$("#menu").text("<h1>text 추가</h1>");
+		});
+	});
+</script>
+</head>
+<body>
+<section>
+	<div id="menu"></div>
+	<button id="button1">1번</button>
+	<button id="button2">2번</button>
+</section>
+</body>
+</html>

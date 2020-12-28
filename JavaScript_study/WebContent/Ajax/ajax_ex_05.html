@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div#result1 {
+		width: 200px;
+		height: 100px;
+		text-align: center;
+		background-color: green;
+	}
+	
+	div#result2 {
+		width: 400px;
+		height: 100px;
+		text-align: center;
+		background-color: blue;
+	}
+</style>
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#button1").click(function(){
+			$("#result1").load("test.txt");
+			$("#result2").load("index.html");
+		});
+	});
+</script>
+</head>
+<body>
+<section>
+	<div id="result1"></div><br>
+	<div id="result2"></div><br>
+	<button id="button1">클릭</button>
+</section>
+</body>
+</html>

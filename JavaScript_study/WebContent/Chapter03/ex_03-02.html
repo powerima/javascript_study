@@ -6,12 +6,10 @@
 <script type="text/javascript">
 	var weekstr = '일월화수목금토';		// 요일 문자열
 	daygap = 2000;					// 설정된 일자 차리
-	
 	now = newDay = new Date();		// 현재 시각 가져오기
 	
 	// 현재 일자에서 날짜를 가져다 간격일 수 만큼 더해서 새로운 일자에 넣음
-	newDay.setDate(now.getDate() + daygap());
-	document.write('aaaa');
+	newDay.setDate(now.getDate() + daygap);
 	newyy = newDay.getYear();
 	newmm = newDay.getMonth() + 1;
 	newdd = newDay.getDate();
